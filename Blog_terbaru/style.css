@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: black;
+}
+
+p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: grey;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+/* titles */
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: chocolate;
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-family: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title::before{
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: chocolate;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+    
+/*logo dan navigasi menu*/
+.nav { 
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.logo a {
+    color: black;
+}
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+nav ul li a {
+    color: black;
+}
+
+/*Burger*/
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+.burger{
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+/* woman section */
+#woman{
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.woman-name{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+.woman-name span{
+    color: chocolate;
+}
+.woman-right img {
+    width: 90%;
+}
+.woman-right{
+    display: flex;
+    justify-content: center;
+}
+
+/* portofolio section*/
+#portfolio {
+    background-color: #fbfbfb;
+    padding: 6rem 0;
+}
+.portfolio .pre-title {
+    margin: 0 auto;
+}
+.portfolio-title {
+    text-align: center;
+}
+.portfolio{
+    padding: 3rem 2 rem;
+    text-align: center;
+    border-radius: 0.7rem;
+}
+.portfolio h4{
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.portfolio-icon {
+    background: #f5f3fe;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+/* tutorial section*/
+#tutorial{
+    padding: 6rem 0;
+}
+
+.tutorial{
+    border-radius: whitesmoke;
+}
+
+.tutorial-cover {
+    height: 270px;
+}
+.tutorial-cover img {
+    width: 85%;
+    height: 100%;
+}
+
+.tutorial-info{
+    padding: 2rem 1.05rem;
+}
+
+.tutorial-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tutorial h4{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.tutorial-title a svg:hover{
+    fill: blue;
+}
+
+.tutorial-title a svg {
+    transition: 0.2s ease-in-out;
+}
+
+.tutorial-tags {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+.tutorial-tags div{
+    font-size: 0.9rem;
+    border: 1px solid gray;
+    padding: 0.4rem 1rem;
+    color: gray;
+}
+
+/*contact section*/
+#contact{
+    padding: 6rem 0;
+    background-color: #fbfbfb;
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+.contactform div{
+    margin-bottom: 1.4rem;
+}
+
+.contactform input,
+.contactform textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family:"Roboto", sans-serif;
+    background: whitesmoke;
+    border: 1px solid gray;
+    border-radius: 3px;
+    resize: none;
+}
+
+.contactform input::placeholder, 
+.contactform textarea::placeholder {
+    color: #9d9fa1;
+}
+
+.contactform input:focus,
+.contactform textarea:focus {
+    outline: none;
+    border: 1px solid #7d7d7d;
+}
+
+.submit{
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.submit:hover{
+    background: blueviolet;
+}
+
+.error-message{
+    color: red;
+    font-size: 12px;
+}
+.input-box.error{
+    border-color: red;
+}
+.input-box.success{
+    border-color: green;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.contact-item-icon {
+    background: whitesmoke;
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*footer*/
+footer{
+    padding: 4rem 0;
+    background: white;
+    text-align: center;
+}
+
+.Social-media{
+    margin: 0 0.5rem
+}
+.Social-media img {
+    fill: #3e3f40
+}
+.Social-media a:hover img{
+    fill: #000;
+}
